@@ -16,7 +16,7 @@ songs_list: list = json.load(open(json_url))
 
 # client = MongoClient(
 #     f"mongodb://{app.config['MONGO_USERNAME']}:{app.config['MONGO_PASSWORD']}@localhost")
-mongodb_service = "localhost"
+mongodb_service = os.environ.get('MONGODB_SERVICE')
 mongodb_username = os.environ.get('MONGODB_USERNAME')
 mongodb_password = os.environ.get('MONGODB_PASSWORD')
 mongodb_port = os.environ.get('MONGODB_PORT')
